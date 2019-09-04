@@ -1,0 +1,23 @@
+{% extends "base.html.twig" %}
+    
+    {% block body %}
+        <table>
+            <th class="th">nom</th>
+            <th class="th">email</th>
+            <th class="th">tel</th>
+            <th class="th">message</th>
+            
+            {% for contact in contacts %}
+            <tr>
+                
+                <td class="td">{{ contact.name }}</td>
+                <td class="td">{{ contact.email }}</td>
+                <td class="td">{{ contact.tel }}</td>
+                <td class="td">{{ contact.message }}</td>
+                
+            </tr>
+            {% endfor %}
+                
+
+        </table>
+    {% endblock %}
